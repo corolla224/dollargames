@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateStatementwithdrawalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
+      Schema::create('statementwithdraw', function(Blueprint $table) {
+            $table->integer('id');
             $table->string('username');
-            $table->string('password');
-            $table->string('email')->unique();
-            $table->string('status');
-		        $table->string('balance');
-            $table->rememberToken();
+            $table->string('balance');
+            $table->string('datetime');
+            $table->string('opinion');
             $table->timestamps();
-        });
+
+    });
     }
 
     /**
@@ -33,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('statementwithdraw');
     }
 }
