@@ -10,10 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/dollargames.index', 'DollargamesController@index');
 
 Route::get('/', function () {
     return view('welcome');
+
 });
+
 
 Auth::routes();
 
