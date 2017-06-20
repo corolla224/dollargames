@@ -61,10 +61,10 @@
             <label for="opinion">opinion</label>
             <input type="text" class="form-control" name="opinion" placeholder="opinion">
         </div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="status">status</label>
             <input type="text" class="form-control" name="status" placeholder="status">
-        </div>
+        </div> --}}
         <input type="submit" class="btn btn-primary" value="submit">
         <input type="submit" class="btn btn-danger" value="cancel">
       </form>
