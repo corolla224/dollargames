@@ -14,10 +14,10 @@ class CreateStatementdepositsTable extends Migration
     public function up()
     {
       Schema::create('statementdeposit', function(Blueprint $table) {
-        $table->integer('id');
+        $table->increments('id');
         $table->string('username');
-        $table->string('balance');
-        $table->string('datetime');
+        $table->integer('balance');
+        $table->datetime('datetime');
         $table->string('opinion');
         $table->timestamps();
 

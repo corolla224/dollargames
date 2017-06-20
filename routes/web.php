@@ -10,14 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dollargames.index', 'DollargamesController@index');
+
 
 Route::get('/', function () {
     return view('welcome');
 
 });
 
+Route::resource('dollargame', 'Resource\DollargameController');
+Route::resource('deposit', 'Resource\DepositController');
+Route::resource('withdarwal', 'Resource\WithdrawalController');
 
-Auth::routes();
+
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

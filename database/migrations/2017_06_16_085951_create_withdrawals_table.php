@@ -14,13 +14,13 @@ class CreateWithdrawalsTable extends Migration
     public function up()
     {
       Schema::create('withdrawal', function(Blueprint $table) {
-      $table->integer('id');
+      $table->increments('id');
       $table->string('username');
       $table->integer('balance');
       $table->string('frombank');
       $table->integer('fromaccountnumber');
       $table->string('fromaccountname');
-      $table->string('withdrawal_datetime');
+      $table->datetime('datetime');
       $table->string('channel');
       $table->integer('tel');
       $table->string('opinion');

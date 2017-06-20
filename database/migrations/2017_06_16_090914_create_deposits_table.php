@@ -13,19 +13,19 @@ class CreateDepositsTable extends Migration
      */
     public function up()
     {
-      Schema::create('deposit', function(Blueprint $table) {
-            $table->integer('id');
+      Schema::create('deposits', function(Blueprint $table) {
+            $table->increments('id');
             $table->string('username');
-            $table->string('balance');
+            $table->integer('balance');
             $table->string('frombank');
-            $table->string('fromaccountnumber');
+            $table->integer('fromaccountnumber');
             $table->string('fromaccontname');
-            $table->string('deposit_datetime');
+            $table->datetime('datetime');
             $table->string('tobank');
-            $table->string('toaccountnumber');
+            $table->integer('toaccountnumber');
             $table->string('toaccountname');
             $table->string('channel');
-            $table->string('tel');
+            $table->integer('tel');
             $table->string('opinion');
             $table->string('status');
             $table->timestamps();
@@ -40,6 +40,6 @@ class CreateDepositsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('deposit');
+        Schema::drop('deposits');
     }
 }
