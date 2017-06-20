@@ -16,13 +16,13 @@ class CreateWithdrawalsTable extends Migration
       Schema::create('withdrawal', function(Blueprint $table) {
       $table->integer('id');
       $table->string('username');
-      $table->string('balance');
+      $table->integer('balance');
       $table->string('frombank');
-      $table->string('fromaccountnumber');
+      $table->integer('fromaccountnumber');
       $table->string('fromaccountname');
       $table->string('withdrawal_datetime');
       $table->string('channel');
-      $table->string('tel');
+      $table->integer('tel');
       $table->string('opinion');
       $table->string('status');
       $table->timestamps();
