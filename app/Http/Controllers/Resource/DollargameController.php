@@ -74,8 +74,14 @@ class DollargameController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {         
+        
+       $deposit = \DB::table('deposits')
+            ->where('id', $id)
+            ->first();
+
+        //dd($deposit);
+        return view('dollargame.show', compact('deposit'));
     }
 
     /**
@@ -86,7 +92,7 @@ class DollargameController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

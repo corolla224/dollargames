@@ -14,7 +14,7 @@ class DopositController extends Controller
      */
     public function index()
     {
-        return view('dolargame.deposit');
+        return view('deposit.index');
     }
 
     /**

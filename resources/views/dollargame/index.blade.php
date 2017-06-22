@@ -37,7 +37,9 @@
             <td>{{ $d->tel }}</td>
             <td>{{ $d->opinion }}</td>
             <td></td>
-            <td><a href="/dollargame/{{ $d->id }}/edit" type="submit" class="btn btn-primary" value="edit">Edit</a>
+            <td>
+            <a href="/dollargame/{{ $d->id }}/edit" type="submit" class="btn btn-primary" value="edit">Edit</a>
+            <a href="/dollargame/{{ $d->id }}/show" type="submit" class="btn btn-primary" value="show">Show</a>
             
             
             </td>            
