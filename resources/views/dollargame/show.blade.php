@@ -1,6 +1,5 @@
 @extends('master')
 
-
 @section('content')
     <h1>Show</h1>
 <table class="table table-bordered">
