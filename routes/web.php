@@ -19,13 +19,15 @@ Route::get('/', function () {
 
 
 Route::resource('dollargame', 'Resource\DollargameController');
-// Route::resource('deposit', 'Resource\DepositController');
-// Route::resource('withdarwal', 'Resource\WithdrawalController');
-// Route::group(['middleware'=>['auth']], function() {
 Auth::routes();
-// });
+Route::group(['middleware'=>['auth']], function() {
 
+Route::resource('deposit', 'Resource\DepositController');
+Route::resource('withdarwal', 'Resource\WithdrawalController');
 Route::get('/home', 'HomeController@index')->name('home');
+});
+
+
 
 
 

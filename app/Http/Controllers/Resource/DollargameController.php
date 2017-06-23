@@ -73,15 +73,23 @@ class DollargameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {         
-        
-       $deposit = \DB::table('deposits')
-            ->where('id', $id)
-            ->first();
+    public function show()
+    {          
+        $deposits = deposit::find($id);
 
-        //dd($deposit);
-        return view('dollargame.show', compact('deposit'));
+        return view('dolargame.show');
+
+
+
+
+
+    //    //$query = request()->query();
+    //     $deposit =\DB::table('deposits')
+    //         ->where('id', $id)
+    //         ->first();
+    //         //->paginate(10)
+    //     return view('dollargame.show', compact('deposit'));
+    //     //return view('employee.index', compact('employees'));
     }
 
     /**

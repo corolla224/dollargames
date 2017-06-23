@@ -19,23 +19,28 @@
             <th>opinion</th>
             <th>สถานะ</th>            
         </tr>  
-        <tr>                          
-            <td>{{ $deposit->id }}</td>
-            <td>{{ $deposit->username }}</td>
-            <td>{{ $deposit->balance }}</td>            
-            <td>{{ $deposit->frombank }}</td>
-            <td>{{ $deposit->fromaccountnumber }}</td>
-            <td>{{ $deposit->fromaccontname }}</td>
-            <td>{{ $deposit->datetime }}</td>
-            <td>{{ $deposit->tobank }}</td>
-            <td>{{ $deposit->toaccountnumber }}</td>
-            <td>{{ $deposit->toaccountname }}</td>
-            <td>{{ $deposit->channel }}</td>
-            <td>{{ $deposit->tel }}</td>
-            <td>{{ $deposit->opinion }}</td>
-            
-        </tr>  
-       
+         @foreach($deposit as $d)               
+            <td>{{ $d->id }}</td>
+            <td>{{ $d->username }}</td>
+            <td>{{ $d->balance }}</td>            
+            <td>{{ $d->frombank }}</td>
+            <td>{{ $d->fromaccountnumber }}</td>
+            <td>{{ $d->fromaccontname }}</td>
+            <td>{{ $d->datetime }}</td>
+            <td>{{ $d->tobank }}</td>
+            <td>{{ $d->toaccountnumber }}</td>
+            <td>{{ $d->toaccountname }}</td>
+            <td>{{ $d->channel }}</td>
+            <td>{{ $d->tel }}</td>
+            <td>{{ $d->opinion }}</td>
+            <td></td>
+            <td></td>            
+        </tr>
+                
+
+
+        @endforeach
+        
 </table>  
 
 
